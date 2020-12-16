@@ -15,6 +15,20 @@ let appTodo = new Vue({
   // options object
   el: "#appTodo",
   data: {
-    logoImg: "assets/img/logo.png"
+    logoImg: "assets/img/logo.png",
+    newTodo: "",
+  },
+  methods: {
+    addNew (){
+      document.getElementById('list').insertAdjacentHTML('beforeend' ,
+      `
+      <li>
+        <div class="inline-block">` + this.newTodo + `</div>
+        <i class="fas fa-trash-alt"></i>
+      </li>
+      `
+    );
+    }
   }
+
 });
