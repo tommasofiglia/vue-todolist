@@ -2,18 +2,43 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #afc3dd;
 }
+/* Utility classes */
+.as-center{
+  align-self: center;
+}
+/* Fine utility classes */
 
 #appTodo{
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #afc3dd;
 }
 
 .container{
+  display: flex;
+  flex-direction: column;
   width: 300px;
-  background-color: black;
   height: 300px;
+  /* border: 1px solid black; */
+}
+
+.container img {
+  width: 160px;
+}
+
+.container form {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.list_container{
+  background-color: #d2d2d2;
+  border-radius: 5px;
+}
+
+ul{
+  list-style: none;
 }

@@ -5,12 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Introduzione a VueJS</title>
+    <title>To do List</title>
   </head>
   <body>
 
     <div id="appTodo">
       <div class="container">
+        <img :src="logoImg" alt="Logo di boolean" class="as-center">
+
+        <form class="as-center" action="index.html" method="post">
+          <input type="text" placeholder="Scrivi qui">
+          <button type="button" name="button">Add</button>
+        </form>
+
+        <h4>To do List</h4>
+        <div class="list_container">
+          <ul>
+            <li>Prova</li>
+            <li>Prova</li>
+            <li>Prova</li>
+          </ul>
+        </div>
 
       </div>
     </div>

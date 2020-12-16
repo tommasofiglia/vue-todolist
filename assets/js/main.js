@@ -9,9 +9,12 @@ Attenzione: l'utente non deve inserire tasks vuote ma almeno un tot di caratteri
 Da tenere a mente:
 Ricordate di scrivere le istruzioni prima di iniziare a lavorare cercate di descrivere in modo sintetico gli step che pensate siano necessari.
 Consultate la documentazione e se siete bloccati, aprite un ticket.
-/*********************************
+********************************/
 
 let appTodo = new Vue({
   // options object
   el: "#appTodo",
+  data: {
+    logoImg: "assets/img/logo.png"
+  }
 });
