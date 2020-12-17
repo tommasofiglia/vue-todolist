@@ -18,6 +18,13 @@ let appTodo = new Vue({
     newTodo: "",
     toDoList: []
   },
+  created() {
+     document.addEventListener("keyup", event => {
+      if (event.keycode === 13 ) {
+      this.addNew();
+      }
+    });
+  },
   methods: {
 
     addNew: function (){

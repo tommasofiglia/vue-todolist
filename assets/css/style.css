@@ -14,7 +14,7 @@
 /* Fine utility classes */
 
 #appTodo{
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,6 +50,8 @@
 
 ul{
   list-style: none;
+  max-height: 50vh;
+  overflow-y: auto;
 }
 
 .list_container li , #empty_message{

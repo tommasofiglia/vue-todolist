@@ -15,7 +15,7 @@
         <img :src="logoImg" alt="Logo di boolean" class="as-center">
 
         <div class="form">
-          <input type="text" placeholder="Scrivi qui" v-model="newTodo">
+          <input type="text" placeholder="Scrivi qui" v-model="newTodo" @keyup.13="addNew">
           <button type="button" name="button" @click="addNew">Add</button>
         </div>
 
