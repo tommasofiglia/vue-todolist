@@ -12,7 +12,6 @@ Consultate la documentazione e se siete bloccati, aprite un ticket.
 ********************************/
 
 let appTodo = new Vue({
-  // options object
   el: "#appTodo",
   data: {
     logoImg: "assets/img/logo.png",
@@ -21,9 +20,8 @@ let appTodo = new Vue({
   },
   methods: {
     addNew: function (){
-      if (this.newTodo.length !== 0) {
-        this.toDoList.push(this.newTodo);
-      }
+      //Uso un operatore ternario per impostare la condizione
+      (this.newTodo.length > 3) ? this.toDoList.push(this.newTodo) : alert("Hai inserito un comando troppo corto! Devi inserire un minimo di 4 caratteri") ;
     }
   }
 
