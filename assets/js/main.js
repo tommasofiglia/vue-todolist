@@ -17,17 +17,11 @@ let appTodo = new Vue({
   data: {
     logoImg: "assets/img/logo.png",
     newTodo: "",
+    toDoList: []
   },
   methods: {
-    addNew (){
-      document.getElementById('list').insertAdjacentHTML('beforeend' ,
-      `
-      <li>
-        <div class="inline-block">` + this.newTodo + `</div>
-        <i class="fas fa-trash-alt"></i>
-      </li>
-      `
-    );
+    addNew: function (){
+      this.toDoList.push(this.newTodo);
     }
   }
 

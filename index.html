@@ -14,18 +14,18 @@
       <div class="container">
         <img :src="logoImg" alt="Logo di boolean" class="as-center">
 
-        <form class="as-center" action="index.html" method="post">
+        <div class="form">
           <input type="text" placeholder="Scrivi qui" v-model="newTodo">
           <button type="button" name="button" @click="addNew">Add</button>
-        </form>
+        </div>
 
         <h4>To do List</h4>
         <div class="list_container">
           <ul id="list">
-            <!-- <li>
-              <div class="inline-block">{{newTodo}}</div>
+            <li v-for="toDo in toDoList">
+              <div class="inline-block">{{toDo}}</div>
               <i class="fas fa-trash-alt"></i>
-            </li> -->
+            </li>
 
           </ul>
         </div>
