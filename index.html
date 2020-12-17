@@ -23,9 +23,9 @@
         <div class="list_container">
 
           <ul id="list" v-if="toDoList.length > 0">
-            <li v-for="toDo in toDoList">
+            <li v-for="(toDo, index) in toDoList">
               <div class="inline-block">{{toDo}}</div>
-              <i class="fas fa-trash-alt"></i>
+              <i class="fas fa-trash-alt" @click="removeTask(index)"></i>
             </li>
           </ul>
           <div v-else id="empty_message">Non hai nulla da fare!</div>
