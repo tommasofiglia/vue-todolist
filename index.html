@@ -21,13 +21,15 @@
 
         <h4>To do List</h4>
         <div class="list_container">
-          <ul id="list">
+
+          <ul id="list" v-if="toDoList.length > 0">
             <li v-for="toDo in toDoList">
               <div class="inline-block">{{toDo}}</div>
               <i class="fas fa-trash-alt"></i>
             </li>
-
           </ul>
+          <div v-else id="empty_message">Non hai nulla da fare!</div>
+
         </div>
 
       </div>

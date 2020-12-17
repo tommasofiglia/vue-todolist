@@ -45,17 +45,18 @@
 .list_container{
   background-color: #d2d2d2;
   border-radius: 5px;
+  position: relative;
 }
 
 ul{
   list-style: none;
 }
 
-.list_container li {
+.list_container li , #empty_message{
   margin-top: 6px;
 }
 
-.list_container li:last-child {
+.list_container li:last-child , #empty_message{
   margin-bottom: 6px;
 }
 
@@ -66,6 +67,10 @@ ul{
 
 .list_container i {
   cursor: pointer;
+}
+
+ul#list i:hover{
+  color: red;
 }
 
 input{
@@ -88,4 +93,8 @@ button{
 
 button:hover{
   background-color: #d2d2d2;
+}
+
+#empty_message{
+  text-align: center;
 }
