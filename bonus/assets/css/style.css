@@ -1,0 +1,102 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Utility classes */
+.as-center{
+  align-self: center;
+}
+
+.inline-block{
+  display: inline-block;
+}
+/* Fine utility classes */
+
+#appTodo{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #afc3dd;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  /* border: 1px solid black; */
+}
+
+.container img {
+  width: 160px;
+}
+
+.container .form {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.container h4{
+  margin-bottom: 5px;
+}
+
+.list_container{
+  background-color: #d2d2d2;
+  border-radius: 5px;
+  position: relative;
+}
+
+ul{
+  list-style: none;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.list_container li , #empty_message{
+  margin-top: 6px;
+}
+
+.list_container li:last-child , #empty_message{
+  margin-bottom: 6px;
+}
+
+.list_container li .inline-block{
+  width: 85%;
+  margin-left: 13px;
+}
+
+.list_container i {
+  cursor: pointer;
+}
+
+ul#list i:hover{
+  color: red;
+}
+
+input{
+  width: 250px;
+  height: 25px;
+  border-radius: 5px;
+  border: 0px;
+  padding-left: 5px;
+  outline: 0;
+}
+
+button{
+  height: 27px;
+  width: 40px;
+  border-radius: 5px;
+  border: 0px;
+  cursor: pointer;
+  outline: 0;
+}
+
+button:hover{
+  background-color: #d2d2d2;
+}
+
+#empty_message{
+  text-align: center;
+}

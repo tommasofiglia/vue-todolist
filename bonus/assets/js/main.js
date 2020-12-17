@@ -28,13 +28,8 @@ let appTodo = new Vue({
   methods: {
 
     addNew: function (){
-      //Uso un if per impostare la condizione
-      if (this.newTodo.length > 3) {
-        this.toDoList.push(this.newTodo);
-        this.newTodo="";
-      } else {
-        alert("Hai inserito un comando troppo corto! Devi inserire un minimo di 4 caratteri");
-      }
+      //Uso un operatore ternario per impostare la condizione
+      (this.newTodo.length > 3) ? this.toDoList.push(this.newTodo) : alert("Hai inserito un comando troppo corto! Devi inserire un minimo di 4 caratteri") ;
     },
 
     removeTask: function(index) {
