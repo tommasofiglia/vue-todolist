@@ -21,7 +21,9 @@ let appTodo = new Vue({
   },
   methods: {
     addNew: function (){
-      this.toDoList.push(this.newTodo);
+      if (this.newTodo.length !== 0) {
+        this.toDoList.push(this.newTodo);
+      }
     }
   }
 
