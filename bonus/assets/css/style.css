@@ -14,24 +14,33 @@
 /* Fine utility classes */
 
 #appTodo{
+  background-color: #afc3dd;
+}
+
+#all_container{
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background-color: #afc3dd;
 }
 
 .container{
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 300px;
   height: 300px;
-  /* border: 1px solid black; */
 }
 
-.container img {
-  width: 160px;
+img {
+  width: 300px;
+  padding-top: 50px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
+/* Container con form per inserire le tasks */
 
 .container .form {
   margin-top: 15px;
@@ -46,6 +55,7 @@
   background-color: #d2d2d2;
   border-radius: 5px;
   position: relative;
+  width: 100%;
 }
 
 ul{
@@ -63,7 +73,7 @@ ul{
 }
 
 .list_container li .inline-block{
-  width: 85%;
+  width: 70%;
   margin-left: 13px;
 }
 
@@ -71,8 +81,16 @@ ul{
   cursor: pointer;
 }
 
-ul#list i:hover{
+ul#list .check{
+  margin-right: 10px;
+}
+
+ul#list .trash:hover{
   color: red;
+}
+
+ul#list .check:hover{
+  color: green;
 }
 
 input{
@@ -99,4 +117,64 @@ button:hover{
 
 #empty_message{
   text-align: center;
+}
+
+/* Container tasks complete */
+
+.completed_tasks , .elements_in_trash{
+  background-color: white;
+  border-radius: 6px;
+  overflow-y: auto;
+}
+
+.completed_tasks ul , .elements_in_trash ul{
+  list-style: none;
+  max-height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.title{
+  background-color: #d2d2d2;
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  height: 40px;
+  line-height: 40px;
+}
+
+.title h4{
+  text-align: center;
+}
+
+.completed_tasks li strong{
+  color: green;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.container.completed_tasks{
+  align-items: flex-start;
+}
+
+/* Container Cestino */
+
+.elements_in_trash li div{
+  color: red;
+  margin-left: 5px;
+  width: 75%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.redo{
+  cursor: pointer;
+}
+
+.redo:hover{
+  color: blue;
+}
+
+.remove_all{
+  width: 50px;
+  height: 50px;
 }

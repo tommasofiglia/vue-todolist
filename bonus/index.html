@@ -11,26 +11,62 @@
   <body>
 
     <div id="appTodo">
-      <div class="container">
-        <img :src="logoImg" alt="Logo di boolean" class="as-center">
 
-        <div class="form">
-          <input type="text" placeholder="Scrivi qui" v-model="newTodo" @keyup.13="addNew">
-          <button type="button" name="button" @click="addNew">Add</button>
+      <img :src="logoImg" alt="Logo di boolean" class="as-center">
+
+      <div id="all_container">
+
+      <!-- Container delle task scritte dall'utente -->
+        <div class="container">
+
+          <div class="form">
+            <input type="text" placeholder="Scrivi qui" v-model="newTodo" @keyup.13="addNew">
+            <button type="button" name="button" @click="addNew">Add</button>
+          </div>
+
+          <h4>To do List</h4>
+          <div class="list_container">
+
+            <ul id="list" v-if="toDoList.length > 0">
+              <li v-for="(toDo, index) in toDoList">
+                <div class="inline-block">{{toDo}}</div>
+                <i class="fas fa-check check" @click="taskDone(index)"></i>
+                <i class="fas fa-trash-alt trash" @click="removeTask(index)"></i>
+              </li>
+            </ul>
+            <div v-else id="empty_message">Non hai nulla da fare!</div>
+
+          </div>
+
         </div>
 
-        <h4>To do List</h4>
-        <div class="list_container">
+        <!-- Container delle task completate -->
 
-          <ul id="list" v-if="toDoList.length > 0">
-            <li v-for="(toDo, index) in toDoList">
-              <div class="inline-block">{{toDo}}</div>
-              <i class="fas fa-trash-alt" @click="removeTask(index)"></i>
-            </li>
+        <div class="container completed_tasks" >
+          <div class="title">
+            <h4>Tasks Completate</h4>
+          </div>
+          <ul>
+            <li v-for="(checkedElement, posizione) in checkedList"><strong>{{posizione + 1}})</strong>{{checkedElement}}</li>
           </ul>
-          <div v-else id="empty_message">Non hai nulla da fare!</div>
-
         </div>
+
+        <!-- Container delle tasks cancellate -->
+
+        <div class="container elements_in_trash">
+          <div class="title">
+            <h4>Cestino</h4>
+          </div>
+          <ul>
+
+            <li v-for="(deletedElement, posizione) in deletedList">
+              <div class="inline-block">{{deletedElement}}</div>
+              <i class="fas fa-redo redo" @click="redoTasks(posizione)"></i>
+            </li>
+
+          </ul>
+        </div>
+        <button class="remove_all" @click="removeAll()">Svuota <br>Cestino</button>
 
       </div>
     </div>
