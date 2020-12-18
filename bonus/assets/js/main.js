@@ -57,7 +57,6 @@ let appTodo = new Vue({
     // Funzione che svuota il Cestino
     removeAll: function(){
       this.deletedList.length = 0;
-      console.log(this.deletedList);
     }
   }
 
